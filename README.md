@@ -136,3 +136,36 @@ Computing maxs and mins of all numeric and character variables using sql arrays
 
     MIN_LENGTH          N8       143
     MAX_LENGTH          N8       238
+    
+    
+    /*             _                                                              
+      ___ ___   __| | ___                                                         
+     / __/ _ \ / _` |/ _ \                                                        
+    | (_| (_) | (_| |  __/                                                        
+     \___\___/ \__,_|\___|                                                        
+                                                                                  
+    */                                                                            
+                                                                                  
+    data _null_;                                                                  
+      put %do_over(_vs,phrase=%str("                                              
+          min(?) as min_?                                                         
+         ,max(?) as max_?)" /))                                                   
+    ;run;quit;                                                                    
+                                                                                  
+    min(MAKE) as min_MAKE     ,max(MAKE) as max_MAKE)                             
+    min(MODEL) as min_MODEL     ,max(MODEL) as max_MODEL)                         
+    min(TYPE) as min_TYPE     ,max(TYPE) as max_TYPE)                             
+    min(ORIGIN) as min_ORIGIN     ,max(ORIGIN) as max_ORIGIN)                     
+    min(DRIVETRAIN) as min_DRIVETRAIN     ,max(DRIVETRAIN) as max_DRIVETRAIN)     
+    min(MSRP) as min_MSRP     ,max(MSRP) as max_MSRP)                             
+    min(INVOICE) as min_INVOICE     ,max(INVOICE) as max_INVOICE)                 
+    min(ENGINESIZE) as min_ENGINESIZE     ,max(ENGINESIZE) as max_ENGINESIZE)     
+    min(CYLINDERS) as min_CYLINDERS     ,max(CYLINDERS) as max_CYLINDERS)         
+    min(HORSEPOWER) as min_HORSEPOWER     ,max(HORSEPOWER) as max_HORSEPOWER)     
+    min(MPG_CITY) as min_MPG_CITY     ,max(MPG_CITY) as max_MPG_CITY)             
+    min(MPG_HIGHWAY) as min_MPG_HIGHWAY     ,max(MPG_HIGHWAY) as max_MPG_HIGHWAY) 
+    min(WEIGHT) as min_WEIGHT     ,max(WEIGHT) as max_WEIGHT)                     
+    min(WHEELBASE) as min_WHEELBASE     ,max(WHEELBASE) as max_WHEELBASE)         
+    min(LENGTH) as min_LENGTH     ,max(LENGTH) as max_LENGTH)                     
+                                                                                  
+
